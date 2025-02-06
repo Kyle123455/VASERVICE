@@ -5,91 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime VA Service</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Add your logo here -->
         <img src="images/logo.png" alt="Prime VA Service Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="Book-a-call.html">Book a Call</a></li>
+                <li><a href="book-a-call.html">Book a Call</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- About Us Section -->
-        <section class="section fade-in">
-            <h2>About Us</h2>
-            <p>
-                At Prime VA Service, we specialize in providing top-tier virtual assistance to businesses and professionals worldwide. 
-                Our team of highly skilled virtual assistants is dedicated to helping you streamline your operations, boost productivity, 
-                and achieve your goals. Whether you need executive support, customer service, or dispatching solutions, we’ve got you covered. 
-                Let us handle the details so you can focus on what matters most—growing your business.
-            </p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Trusted Virtual Assistant Service</h1>
+        <p>We provide top-notch virtual assistance to help you grow your business.</p>
+        <button class="cta-button" onclick="location.href='book-a-call.html'">Get Started</button>
+    </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="section fade-in">
-            <h2>Why Choose Us?</h2>
-            <div class="card-container">
-                <div class="card">
-                     <div class="reason">
-                <i class="fas fa-check-circle"></i>
-                    <h3>Expert Team</h3>
-                    <p>Our virtual assistants are highly trained and experienced in their respective fields.</p>
-                </div>
-                <div class="card">
-                     <div class="reason">
-        <i class="fas fa-user-tie fa-3x"></i>
-                    <h3>Custom Solutions</h3>
-                    <p>We tailor our services to meet your unique business needs.</p>
-                </div>
-                <div class="card">
-                     <div class="reason">
-                  <i class="fas fa-headset fa-3x"></i>
-                    <h3>24/7 Support</h3>
-                    <p>We’re always here to help, no matter the time or day.</p>
-                </div>
-                <div class="card">
-                <i class="fas fa-dollar-sign"></i>
-                    <h3>Affordable Pricing</h3>
-                    <p>Get premium services at competitive rates.</p>
-                </div>
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Prime VA Service?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Expert Team</h3>
+                <p>Our virtual assistants are highly trained and experienced.</p>
             </div>
-        </section>
-
-        <!-- Services Preview Section -->
-        <section class="section fade-in">
-            <h2>Our Services</h2>
-            <div class="card-container">
-                <div class="card">
-                     <div class="reason">
-                  <i class="fas fa-user-tie fa-3x"></i>
-                    <h3>Executive Assistant</h3>
-                    <p>Professional support for your business needs.</p>
-                    <a href="executive-assistant.html">Learn More</a>
-                </div>
-                <div class="card">
-                     <div class="reason">
-                  <i class="fas fa-truck-moving fa-3x"></i>
-                    <h3>Dispatcher</h3>
-                    <p>Efficient dispatching services for your operations.</p>
-                    <a href="dispatcher.html">Learn More</a>
-                </div>
-                <div class="card">
-                     <div class="reason">
-                  <i class="fas fa-headset fa-3x"></i>
-                    <h3>Customer Support</h3>
-                    <p>24/7 customer support for your clients.</p>
-                    <a href="customer-support.html">Learn More</a>
-                </div>
+            <div class="feature-card">
+                <i class="fas fa-cogs"></i>
+                <h3>Custom Solutions</h3>
+                <p>We tailor our services to meet your unique needs.</p>
             </div>
-        </section>
-    </main>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>We’re always here to help, day or night.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2023 Prime VA Service. All rights reserved.</p>
     </footer>
