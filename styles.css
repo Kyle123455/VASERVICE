@@ -1,10 +1,10 @@
 /* General Styles */
 :root {
-    --primary-color: #0FFF50; /* Green (change to your brand color) */
-    --secondary-color: #333; /* Dark gray */
-    --background-color: #a2a2a2; /* Light gray */
-    --text-color: #333; /* Dark gray */
-    --white: #fff;
+    --primary-color: #FF00FF; /* Magenta (primary color) */
+    --secondary-color: #4B0082; /* Indigo (secondary color) */
+    --background-color: #F8F8FF; /* Ghost White (light background) */
+    --text-color: #333; /* Dark gray for text */
+    --white: #fff; /* White */
 }
 
 body {
@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button:hover {
-    background-color: darken(var(--background-color), 10%);
+    background-color: #CC00CC; /* Darker magenta on hover */
 }
 
 /* Features Section */
@@ -95,6 +95,7 @@ nav ul li a:hover {
 .features h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
+    color: var(--secondary-color);
 }
 
 .feature-cards {
@@ -123,6 +124,7 @@ nav ul li a:hover {
 .feature-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    color: var(--secondary-color);
 }
 
 .feature-card p {
@@ -142,6 +144,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 /* Fade-In Animation */
 @keyframes fadeIn {
     from {
@@ -177,6 +180,7 @@ footer p {
 .fade-in.delay-5 {
     animation-delay: 2.5s;
 }
+
 /* Additional Info Section */
 .additional-info {
     padding: 60px 20px;
@@ -238,10 +242,11 @@ footer p {
     background-color: var(--secondary-color);
     color: var(--white);
 }
+
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--white);
     padding: 20px;
     margin-top: 40px;
     text-align: center;
@@ -268,13 +273,13 @@ footer {
 }
 
 .footer-section strong {
-    color: #4CAF50; /* Your primary color */
+    color: var(--primary-color); /* Magenta for emphasis */
 }
 
 .footer-bottom {
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid #444;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
