@@ -177,3 +177,64 @@ footer p {
 .fade-in.delay-5 {
     animation-delay: 2.5s;
 }
+/* Additional Info Section */
+.additional-info {
+    padding: 60px 20px;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.additional-info .info-card {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info .info-card h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.additional-info .info-card p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    padding: 60px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-section .cta-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
