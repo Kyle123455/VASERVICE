@@ -3,7 +3,7 @@
     --primary-color: #FF00FF; /* Magenta (primary color) */
     --secondary-color: #4B0082; /* Indigo (secondary color) */
     --background-color: #F8F8FF; /* Ghost White (light background) */
-    --text-color: #333; /* Dark gray for text */
+    --text-color: #000000; /* Black for text */
     --white: #fff; /* White */
 }
 
@@ -13,7 +13,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--text-color); /* Black text */
 }
 
 /* Header */
@@ -42,13 +42,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Indigo for links */
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Magenta on hover */
 }
 
 /* Hero Section */
@@ -56,7 +56,7 @@ nav ul li a:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.jpg');
     background-size: cover;
     background-position: center;
-    color: var(--white);
+    color: var(--white); /* White text for hero section */
     text-align: center;
     padding: 100px 20px;
 }
@@ -72,7 +72,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Magenta button */
     color: var(--white);
     padding: 15px 30px;
     border: none;
@@ -95,7 +95,7 @@ nav ul li a:hover {
 .features h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Indigo for headings */
 }
 
 .feature-cards {
@@ -117,25 +117,25 @@ nav ul li a:hover {
 
 .feature-card i {
     font-size: 2.5em;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Magenta for icons */
     margin-bottom: 15px;
 }
 
 .feature-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Indigo for headings */
 }
 
 .feature-card p {
     font-size: 1em;
-    color: #666;
+    color: var(--text-color); /* Black text */
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
+    background-color: var(--secondary-color); /* Indigo background */
+    color: var(--white); /* White text */
     text-align: center;
     padding: 20px;
     margin-top: 40px;
@@ -200,20 +200,20 @@ footer p {
 .additional-info .info-card h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Magenta for headings */
 }
 
 .additional-info .info-card p {
     font-size: 1.1em;
-    color: var(--text-color);
+    color: var(--text-color); /* Black text */
     line-height: 1.8;
 }
 
 /* Call-to-Action Section */
 .cta-section {
     padding: 60px 20px;
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--primary-color); /* Magenta background */
+    color: var(--white); /* White text */
     text-align: center;
 }
 
@@ -228,8 +228,8 @@ footer p {
 }
 
 .cta-section .cta-button {
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: var(--white); /* White button */
+    color: var(--primary-color); /* Magenta text */
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -239,14 +239,14 @@ footer p {
 }
 
 .cta-section .cta-button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Indigo on hover */
     color: var(--white);
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
+    background-color: var(--secondary-color); /* Indigo background */
+    color: var(--white); /* White text */
     padding: 20px;
     margin-top: 40px;
     text-align: center;
