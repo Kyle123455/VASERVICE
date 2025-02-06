@@ -146,7 +146,7 @@ footer p {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Optional: Adds a slight upward movement */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -157,6 +157,7 @@ footer p {
 .fade-in {
     animation: fadeIn 1s ease-in-out;
 }
+
 .fade-in.delay-1 {
     animation-delay: 0.5s;
 }
@@ -167,4 +168,12 @@ footer p {
 
 .fade-in.delay-3 {
     animation-delay: 1.5s;
+}
+
+.fade-in.delay-4 {
+    animation-delay: 2s;
+}
+
+.fade-in.delay-5 {
+    animation-delay: 2.5s;
 }
