@@ -19,7 +19,7 @@ body {
 /* Header */
 header {
     background-color: var(--white);
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,8 @@ header {
 }
 
 header .logo {
-    height: 140px; /* Adjust based on your logo size */
+    height: 100px; /* Adjust based on your logo size */
+    widht: 50;
 }
 
 nav ul {
