@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: darken(var(--background-color), 10%);
 }
 
 /* Features Section */
