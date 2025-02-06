@@ -18,7 +18,7 @@ body {
 
 /* Header */
 header {
-    background-color: var(--white);
+    background-color: var(--gray);
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -28,7 +28,7 @@ header {
 
 header .logo {
     height: 100px; /* Adjust based on your logo size */
-    width: 50px;
+    width: 70px;
 }
 
 nav ul {
