@@ -1,74 +1,297 @@
 /* General Styles */
 :root {
-    --primary-color: #6A5ACD; /* Blueish with a magenta touch */
-    --secondary-color: #2C2F40; /* Dark muted blue */
-    --background-color: #D8E2F0; /* Soft bluish-gray */
-    --text-color: #2C2F40; /* Dark muted blue */
-    --white: #ffffff;
+    --primary-color: #FF00FF; /* Magenta (primary color) */
+    --secondary-color: #4B0082; /* Indigo (secondary color) */
+    --background-color: #FFFFFF; /* White background */
+    --text-color: #000000; /* Black text */
+    --accent-color: #FFD700; /* Gold for accents */
+    --white: #fff; /* White */
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--text-color); /* Black text */
 }
 
 /* Header */
 header {
     background-color: var(--white);
+    padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 110px; /* Adjust based on your logo size */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Indigo for links */
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Magenta on hover */
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero-image.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.jpg');
     background-size: cover;
-    color: var(--white);
+    background-position: center;
+    color: var(--white); /* White text for hero section */
+    text-align: center;
+    padding: 150px 20px; /* Increased padding for emphasis */
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Larger font size */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
 }
 
 .hero .cta-button {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Magenta button */
     color: var(--white);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .hero .cta-button:hover {
-    background-color: #483D8B; /* Darker shade of primary color */
+    background-color: #CC00CC; /* Darker magenta on hover */
 }
 
 /* Features Section */
-.feature-card i {
-    color: var(--primary-color);
-}
-
-/* Call-to-Action Section */
-.cta-section {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.cta-section .cta-button {
+.features {
+    padding: 80px 20px; /* Increased padding */
+    text-align: center;
     background-color: var(--white);
-    color: var(--primary-color);
 }
 
-.cta-section .cta-button:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
+.features h2 {
+    font-size: 2.8em; /* Larger font size */
+    margin-bottom: 40px;
+    color: var(--secondary-color); /* Indigo for headings */
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card i {
+    font-size: 2.5em;
+    color: var(--primary-color); /* Magenta for icons */
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--secondary-color); /* Indigo for headings */
+}
+
+.feature-card p {
+    font-size: 1em;
+    color: var(--text-color); /* Black text */
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Indigo background */
+    color: var(--white); /* White text */
+    text-align: center;
+    padding: 40px 20px; /* Increased padding */
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.fade-in.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 1s;
+}
+
+.fade-in.delay-3 {
+    animation-delay: 1.5s;
+}
+
+.fade-in.delay-4 {
+    animation-delay: 2s;
+}
+
+.fade-in.delay-5 {
+    animation-delay: 2.5s;
+}
+
+/* Additional Info Section */
+.additional-info {
+    padding: 80px 20px; /* Increased padding */
+    background-color: var(--white);
+    text-align: center;
+}
+
+.additional-info .info-card {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info .info-card h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Magenta for headings */
+}
+
+.additional-info .info-card p {
+    font-size: 1.1em;
+    color: var(--text-color); /* Black text */
+    line-height: 1.8;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    padding: 80px 20px; /* Increased padding */
+    background-color: var(--primary-color); /* Magenta background */
+    color: var(--white); /* White text */
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.8em; /* Larger font size */
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-section .cta-button {
+    background-color: var(--white); /* White button */
+    color: var(--primary-color); /* Magenta text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: var(--accent-color); /* Gold on hover */
     color: var(--white);
 }
 
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color); /* Indigo background */
+    color: var(--white); /* White text */
+    padding: 40px 20px; /* Increased padding */
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+}
+
 .footer-section strong {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Magenta for emphasis */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
 }
