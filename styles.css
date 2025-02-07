@@ -1,241 +1,198 @@
 /* General Styles */
-:root {
-    --primary-color: #2196F3; /* Blue (primary color) */
-    --secondary-color: #9C27B0; /* Magenta (secondary color) */
-    --background-color: #FFFFFF; /* White background */
-    --text-color: #000000; /* Black text */
-    --accent-color: #FF4081; /* Pink accent for buttons/hover */
-    --white: #FFFFFF; /* White */
-}
-
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color); /* Black text */
+    box-sizing: border-box;
 }
 
-/* Header */
 header {
-    background-color: var(--white);
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }
 
 header .logo {
-    height: 110px; /* Adjust based on your logo size */
+    height: 50px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: var(--primary-color); /* Blue for links */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: var(--secondary-color); /* Magenta on hover */
-}
-
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(33, 150, 243, 0.8), rgba(156, 39, 176, 0.8)), url('img/logo.png');
-    background-size: cover;
-    background-position: center;
-    color: var(--white); /* White text for hero section */
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
     text-align: center;
-    padding: 150px 20px; /* Increased padding for emphasis */
+    padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 3.5em; /* Larger font size */
+    font-size: 3rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
 }
 
 .hero p {
-    font-size: 1.3em;
-    margin-bottom: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-.hero .cta-button {
-    background-color: var(--primary-color); /* Blue button */
-    color: var(--white);
-    padding: 15px 30px;
+.cta-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.hero .cta-button:hover {
-    background-color: var(--primary-color); /* Magenta on hover */
+.cta-button:hover {
+    background-color: #e65a50;
 }
 
 /* Features Section */
 .features {
-    padding: 80px 20px; /* Increased padding */
+    padding: 50px 20px;
     text-align: center;
-    background-color: var(--white);
 }
 
 .features h2 {
-    font-size: 2.8em; /* Larger font size */
+    font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--primary-color); /* Blue for headings */
 }
 
 .feature-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
 }
 
 .feature-card {
-    flex: 1 1 300px;
-    max-width: 300px;
-    background: var(--white);
-    border-radius: 8px;
+    background-color: #f9f9f9;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card i {
-    font-size: 2.5em;
-    color: var(--primary-color); /* Blue for icons */
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6f61;
 }
 
 .feature-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    color: var(--primary-color); /* Blue for headings */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .feature-card p {
-    font-size: 1em;
-    color: var(--text-color); /* Black text */
+    font-size: 1rem;
+    color: #666;
 }
 
 /* Testimonials Section */
 .testimonials {
-    padding: 80px 20px; /* Increased padding */
+    padding: 50px 20px;
     text-align: center;
-    background-color: var(--white);
+    background-color: #f9f9f9;
 }
 
 .testimonials h2 {
-    font-size: 2.8em; /* Larger font size */
+    font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--primary-color); /* Blue for headings */
 }
 
 .testimonials-carousel {
     overflow: hidden;
     position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .testimonials-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .testimonial-card {
-    flex: 0 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     width: 300px;
     margin: 0 10px;
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .testimonial-card p {
     font-size: 1rem;
-    color: var(--text-color); /* Black text */
-    margin-bottom: 15px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .testimonial-card .client-name {
     font-size: 0.9rem;
-    color: var(--text-color); /* Black text */
-    font-weight: bold;
+    color: #666;
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-color); /* Blue background */
-    color: var(--text-color); /* Black text */
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 40px 20px; /* Increased padding */
-    margin-top: 40px;
 }
 
 footer .footer-content {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 footer .footer-section {
-    flex: 1 1 300px;
-    text-align: center;
+    margin: 10px;
 }
 
 footer .footer-section h3 {
-    color: var(--text-color); /* Magenta for headings */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 footer .footer-section p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 0;
-    color: var(--text-color); /* Black text */
+    font-size: 1rem;
+    color: #ccc;
 }
 
 footer .footer-section a {
-    color: var(--text-color); /* Magenta for links */
+    color: #ff6f61;
     text-decoration: none;
 }
 
 footer .footer-section a:hover {
-    color: var(--accent-color); /* Pink accent on hover */
+    text-decoration: underline;
 }
 
-footer .footer-bottom {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    color: var(--text-color); /* Black text */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
 }
