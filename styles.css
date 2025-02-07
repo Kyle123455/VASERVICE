@@ -214,7 +214,7 @@ footer .footer-section {
 }
 
 footer .footer-section h3 {
-    color: var(--secondary-color); /* Magenta for headings */
+    color: var(--text-color); /* Magenta for headings */
 }
 
 footer .footer-section p {
@@ -225,7 +225,7 @@ footer .footer-section p {
 }
 
 footer .footer-section a {
-    color: var(--secondary-color); /* Magenta for links */
+    color: var(--text-color); /* Magenta for links */
     text-decoration: none;
 }
 
