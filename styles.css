@@ -295,6 +295,7 @@ footer {
     padding: 50px 20px;
     background-color: #f9f9f9;
     text-align: center;
+    overflow: hidden; /* Hide overflow to create a sliding effect */
 }
 
 .testimonials h2 {
@@ -304,16 +305,14 @@ footer {
 
 .testimonials-container {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: max-content; /* Allow the container to expand based on content */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
 }
 
 .testimonial-card {
     flex: 0 0 auto;
     width: 300px;
-    margin: 0 15px;
+    margin: 0 10px; /* Add spacing between cards */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -329,8 +328,4 @@ footer {
 .client-name {
     font-weight: bold;
     color: #333;
-}
-.footer-bottom p {
-    margin: 0;
-    font-size: 0.9em;
 }
