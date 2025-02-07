@@ -2,9 +2,9 @@
 :root {
     --primary-color: #2196F3; /* Blue (primary color) */
     --secondary-color: #9C27B0; /* Magenta (secondary color) */
-    --background-color: #F5F5F5; /* Light gray background */
-    --text-color: #333333; /* Dark gray text */
-    --accent-color: #9C27B0; /* Gold for accents */
+    --background-color: #FFFFFF; /* White background */
+    --text-color: #000000; /* Black text */
+    --accent-color: #FF4081; /* Pink accent for buttons/hover */
     --white: #FFFFFF; /* White */
 }
 
@@ -14,7 +14,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: var(--background-color);
-    color: var(--secondary-color); /* Dark gray text */
+    color: var(--text-color); /* Black text */
 }
 
 /* Header */
@@ -54,7 +54,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(255, 0, 255, 0.5), rgba(255, 0, 255, 0.5)), url('img/logo.png');
+    background: linear-gradient(rgba(33, 150, 243, 0.8), rgba(156, 39, 176, 0.8)), url('img/logo.png');
     background-size: cover;
     background-position: center;
     color: var(--white); /* White text for hero section */
@@ -138,169 +138,20 @@ nav ul li a:hover {
 
 .feature-card p {
     font-size: 1em;
-    color: var(--text-color); /* Dark gray text */
+    color: var(--text-color); /* Black text */
 }
 
-/* Footer */
-footer {
-    background-color: var(--primary-color); /* Blue background */
-    color: var(--white); /* White text */
-    text-align: center;
-    padding: 40px 20px; /* Increased padding */
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Fade-In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.fade-in.delay-1 {
-    animation-delay: 0.5s;
-}
-
-.fade-in.delay-2 {
-    animation-delay: 1s;
-}
-
-.fade-in.delay-3 {
-    animation-delay: 1.5s;
-}
-
-.fade-in.delay-4 {
-    animation-delay: 2s;
-}
-
-.fade-in.delay-5 {
-    animation-delay: 2.5s;
-}
-
-/* Additional Info Section */
-.additional-info {
-    padding: 80px 20px; /* Increased padding */
-    background-color: var(--white);
-    text-align: center;
-}
-
-.additional-info .info-card {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    padding: 20px;
-    background-color: var(--background-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.additional-info .info-card h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: var(--primary-color); /* Blue for headings */
-}
-
-.additional-info .info-card p {
-    font-size: 1.1em;
-    color: var(--text-color); /* Dark gray text */
-    line-height: 1.8;
-}
-
-/* Call-to-Action Section */
-.cta-section {
-    padding: 80px 20px; /* Increased padding */
-    background-color: var(--secondary-color); /* Magenta background */
-    color: var(--white); /* White text */
-    text-align: center;
-}
-
-.cta-section h2 {
-    font-size: 2.8em; /* Larger font size */
-    margin-bottom: 20px;
-}
-
-.cta-section p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-.cta-section .cta-button {
-    background-color: var(--white); /* White button */
-    color: var(--secondary-color); /* Magenta text */
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-section .cta-button:hover {
-    background-color: var(--accent-color); /* Gold on hover */
-    color: var(--white);
-}
-
-/* Footer Styles */
-footer {
-    background-color: var(--primary-color); /* Blue background */
-    color: var(--white); /* White text */
-    padding: 40px 20px; /* Increased padding */
-    margin-top: 40px;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1 1 300px;
-    text-align: center;
-}
-
-.footer-section p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.footer-section strong {
-    color: var(--secondary-color); /* Magenta for emphasis */
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
 /* Testimonials Section */
 .testimonials {
-    padding: 50px 20px;
+    padding: 80px 20px; /* Increased padding */
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: var(--white);
 }
 
 .testimonials h2 {
+    font-size: 2.8em; /* Larger font size */
     margin-bottom: 40px;
-    font-size: 2rem;
-    color: #333;
+    color: var(--primary-color); /* Blue for headings */
 }
 
 .testimonials-carousel {
@@ -321,7 +172,7 @@ footer {
     width: 300px;
     margin: 0 10px;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -329,12 +180,62 @@ footer {
 
 .testimonial-card p {
     font-size: 1rem;
-    color: #555;
+    color: var(--text-color); /* Black text */
     margin-bottom: 15px;
 }
 
 .testimonial-card .client-name {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--text-color); /* Black text */
     font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color); /* Blue background */
+    color: var(--text-color); /* Black text */
+    text-align: center;
+    padding: 40px 20px; /* Increased padding */
+    margin-top: 40px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-section {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+footer .footer-section h3 {
+    color: var(--secondary-color); /* Magenta for headings */
+}
+
+footer .footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text-color); /* Black text */
+}
+
+footer .footer-section a {
+    color: var(--secondary-color); /* Magenta for links */
+    text-decoration: none;
+}
+
+footer .footer-section a:hover {
+    color: var(--accent-color); /* Pink accent on hover */
+}
+
+footer .footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-color); /* Black text */
 }
