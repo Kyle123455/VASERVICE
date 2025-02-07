@@ -49,22 +49,6 @@
                 <h3>Affordable Pricing</h3>
                 <p>Our services are competitively priced to provide the best value for your investment.</p>
             </div>
-            <!-- New Feature Cards -->
-            <div class="feature-card">
-                <i class="fas fa-hashtag"></i>
-                <h3>Social Media Management</h3>
-                <p>We manage and grow your social media presence across platforms.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-pen"></i>
-                <h3>Content Creation</h3>
-                <p>We create engaging content for blogs, websites, and social media.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-headset"></i>
-                <h3>Customer Support</h3>
-                <p>We provide 24/7 customer support to handle inquiries and issues.</p>
-            </div>
         </div>
     </section>
 
@@ -73,7 +57,58 @@
         <h2>What Our Clients Say</h2>
         <div class="testimonials-carousel">
             <div class="testimonials-container">
-                <!-- Testimonial cards here (unchanged) -->
+                <div class="testimonial-card">
+                    <p>"Prime VA Service has been a game-changer for my business. Highly recommended!"</p>
+                    <p class="client-name">- John Doe</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The team is professional and always delivers on time. Great service!"</p>
+                    <p class="client-name">- Jane Smith</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Affordable and reliable. I couldn't ask for more."</p>
+                    <p class="client-name">- Mike Johnson</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Excellent support and communication. Very satisfied!"</p>
+                    <p class="client-name">- Sarah Brown</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The best virtual assistant service I've ever used. Highly professional!"</p>
+                    <p class="client-name">- David Wilson</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"They helped me save so much time and focus on growing my business."</p>
+                    <p class="client-name">- Emily Davis</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Great value for money. The team is always responsive and helpful."</p>
+                    <p class="client-name">- Michael Brown</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I love how they customize their services to fit my needs perfectly."</p>
+                    <p class="client-name">- Laura Martinez</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Prime VA Service is a lifesaver for small business owners like me."</p>
+                    <p class="client-name">- James Anderson</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The support team is amazing. They go above and beyond to help."</p>
+                    <p class="client-name">- Olivia Taylor</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I can't imagine running my business without their help. Thank you!"</p>
+                    <p class="client-name">- Daniel Thomas</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Highly efficient and reliable. I recommend them to everyone."</p>
+                    <p class="client-name">- Sophia Clark</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The best decision I made for my business was hiring Prime VA Service."</p>
+                    <p class="client-name">- William Rodriguez</p>
+                </div>
             </div>
         </div>
     </section>
@@ -99,33 +134,34 @@
 
     <!-- JavaScript for Auto-Scrolling Testimonials -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const testimonialsContainer = document.querySelector('.testimonials-container');
-            const testimonialCards = document.querySelectorAll('.testimonial-card');
-            const cardWidth = testimonialCards[0].offsetWidth + 20; // Include margin/gap
-            let scrollAmount = 0;
+     document.addEventListener("DOMContentLoaded", function () {
+    const testimonialsContainer = document.querySelector('.testimonials-container');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const cardWidth = testimonialCards[0].offsetWidth + 20; // Include margin/gap
+    let scrollAmount = 0;
 
-            // Clone the first set of testimonials and append them to the container
-            testimonialsContainer.innerHTML += testimonialsContainer.innerHTML;
+    // Clone the first set of testimonials and append them to the container
+    // This creates a seamless loop effect
+    testimonialsContainer.innerHTML += testimonialsContainer.innerHTML;
 
-            function autoScrollTestimonials() {
-                scrollAmount += cardWidth; // Move to the next card
+    function autoScrollTestimonials() {
+        scrollAmount += cardWidth; // Move to the next card
 
-                // If we've scrolled past the original set of testimonials, reset to the beginning
-                if (scrollAmount >= testimonialsContainer.scrollWidth / 2) {
-                    scrollAmount = 0;
-                    testimonialsContainer.style.transition = 'none';
-                    testimonialsContainer.style.transform = `translateX(0)`;
-                    // Force reflow to apply the reset without animation
-                    void testimonialsContainer.offsetWidth;
-                }
+        // If we've scrolled past the original set of testimonials, reset to the beginning
+        if (scrollAmount >= testimonialsContainer.scrollWidth / 2) {
+            scrollAmount = 0;
+            testimonialsContainer.style.transition = 'none';
+            testimonialsContainer.style.transform = `translateX(0)`;
+            // Force reflow to apply the reset without animation
+            void testimonialsContainer.offsetWidth;
+        }
 
-                testimonialsContainer.style.transition = 'transform 0.3s ease-in-out';
-                testimonialsContainer.style.transform = `translateX(-${scrollAmount}px)`;
-            }
+        testimonialsContainer.style.transition = 'transform 0.3s ease-in-out';
+        testimonialsContainer.style.transform = `translateX(-${scrollAmount}px)`;
+    }
 
-            setInterval(autoScrollTestimonials, 3000); // Adjust the interval (in milliseconds) as needed
-        });
+    setInterval(autoScrollTestimonials, 3000); // Adjust the interval (in milliseconds) as needed
+});
     </script>
 </body>
 </html>
