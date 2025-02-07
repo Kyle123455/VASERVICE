@@ -85,7 +85,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button:hover {
-    background-color: var(--secondary-color); /* Magenta on hover */
+    background-color: var(--primary-color); /* Magenta on hover */
 }
 
 /* Features Section */
