@@ -1,11 +1,11 @@
 /* General Styles */
 :root {
-    --primary-color: #FF00FF; /* Magenta (primary color) */
-    --secondary-color: #4B0082; /* Indigo (secondary color) */
-    --background-color: #FFFFFF; /* White background */
-    --text-color: #000000; /* Black text */
-    --accent-color: #FFD700; /* Gold for accents */
-    --white: #fff; /* White */
+    --primary-color: #2196F3; /* Blue (primary color) */
+    --secondary-color: #9C27B0; /* Magenta (secondary color) */
+    --background-color: #F5F5F5; /* Light gray background */
+    --text-color: #333333; /* Dark gray text */
+    --accent-color: #FFC107; /* Gold for accents */
+    --white: #FFFFFF; /* White */
 }
 
 body {
@@ -14,7 +14,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: var(--background-color);
-    color: var(--text-color); /* Black text */
+    color: var(--text-color); /* Dark gray text */
 }
 
 /* Header */
@@ -43,13 +43,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--secondary-color); /* Indigo for links */
+    color: var(--primary-color); /* Blue for links */
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color); /* Magenta on hover */
+    color: var(--secondary-color); /* Magenta on hover */
 }
 
 /* Hero Section */
@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button {
-    background-color: var(--primary-color); /* Magenta button */
+    background-color: var(--primary-color); /* Blue button */
     color: var(--white);
     padding: 15px 30px;
     border: none;
@@ -85,7 +85,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button:hover {
-    background-color: #CC00CC; /* Darker magenta on hover */
+    background-color: var(--secondary-color); /* Magenta on hover */
 }
 
 /* Features Section */
@@ -98,7 +98,7 @@ nav ul li a:hover {
 .features h2 {
     font-size: 2.8em; /* Larger font size */
     margin-bottom: 40px;
-    color: var(--secondary-color); /* Indigo for headings */
+    color: var(--primary-color); /* Blue for headings */
 }
 
 .feature-cards {
@@ -126,24 +126,24 @@ nav ul li a:hover {
 
 .feature-card i {
     font-size: 2.5em;
-    color: var(--primary-color); /* Magenta for icons */
+    color: var(--primary-color); /* Blue for icons */
     margin-bottom: 15px;
 }
 
 .feature-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: var(--secondary-color); /* Indigo for headings */
+    color: var(--primary-color); /* Blue for headings */
 }
 
 .feature-card p {
     font-size: 1em;
-    color: var(--text-color); /* Black text */
+    color: var(--text-color); /* Dark gray text */
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color); /* Indigo background */
+    background-color: var(--primary-color); /* Blue background */
     color: var(--white); /* White text */
     text-align: center;
     padding: 40px 20px; /* Increased padding */
@@ -209,19 +209,19 @@ footer p {
 .additional-info .info-card h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: var(--primary-color); /* Magenta for headings */
+    color: var(--primary-color); /* Blue for headings */
 }
 
 .additional-info .info-card p {
     font-size: 1.1em;
-    color: var(--text-color); /* Black text */
+    color: var(--text-color); /* Dark gray text */
     line-height: 1.8;
 }
 
 /* Call-to-Action Section */
 .cta-section {
     padding: 80px 20px; /* Increased padding */
-    background-color: var(--primary-color); /* Magenta background */
+    background-color: var(--secondary-color); /* Magenta background */
     color: var(--white); /* White text */
     text-align: center;
 }
@@ -238,7 +238,7 @@ footer p {
 
 .cta-section .cta-button {
     background-color: var(--white); /* White button */
-    color: var(--primary-color); /* Magenta text */
+    color: var(--secondary-color); /* Magenta text */
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -254,7 +254,7 @@ footer p {
 
 /* Footer Styles */
 footer {
-    background-color: var(--secondary-color); /* Indigo background */
+    background-color: var(--primary-color); /* Blue background */
     color: var(--white); /* White text */
     padding: 40px 20px; /* Increased padding */
     margin-top: 40px;
@@ -282,7 +282,7 @@ footer {
 }
 
 .footer-section strong {
-    color: var(--primary-color); /* Magenta for emphasis */
+    color: var(--secondary-color); /* Magenta for emphasis */
 }
 
 .footer-bottom {
