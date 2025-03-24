@@ -239,3 +239,57 @@ footer .footer-bottom {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-color); /* Black text */
 }
+/* Logo Styles - Add to your CSS */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--darker);
+  transition: var(--transition);
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--gradient-primary);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.logo-text {
+  position: relative;
+}
+
+/* Optional: Animated underline on hover */
+.logo-text:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: var(--transition);
+}
+
+.logo:hover .logo-text:after {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
