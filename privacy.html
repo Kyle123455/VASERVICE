@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Prime VA Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reuse your existing CSS variables and base styles */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #7c3aed;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --darker: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--darker);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header - Reused from other pages */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--darker);
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-primary);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Privacy Policy Content */
+        .privacy-hero {
+            padding: 180px 0 80px;
+            background-color: var(--light);
+            text-align: center;
+        }
+
+        .privacy-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .privacy-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+        }
+
+        .privacy-content {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .privacy-section {
+            margin-bottom: 60px;
+        }
+
+        .privacy-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .privacy-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--dark);
+        }
+
+        .privacy-section p, 
+        .privacy-section ul {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .privacy-section ul {
+            padding-left: 20px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: rgba(16, 185, 129, 0.1);
+            padding: 20px;
+            border-left: 4px solid var(--accent);
+            margin: 25px 0;
+        }
+
+        /* Footer - Reused from other pages */
+        footer {
+            background-color: var(--darker);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gradient-primary);
+        }
+
+        .footer-section p, 
+        .footer-section a {
+            color: var(--light-gray);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .privacy-hero {
+                padding: 150px 0 60px;
+            }
+            
+            .privacy-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <span class="logo-text">Prime VA</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="book-a-call.html">Book a Call</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="privacy-hero animate__animated animate__fadeIn">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Last Updated: January 1, 2023</p>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="privacy-content">
+        <div class="container">
+            <div class="privacy-section">
+                <h2>Introduction</h2>
+                <p>Prime VA Service ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                
+                <div class="highlight">
+                    <p>We never sell your personal data. We only collect information necessary to provide and improve our services.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Information We Collect</h2>
+                
+                <h3>Personal Data</h3>
+                <p>When you use our services, we may collect:</p>
+                <ul>
+                    <li>Contact information (name, email, phone number)</li>
+                    <li>Business information (company name, job title)</li>
+                    <li>Payment details (processed securely via third-party providers)</li>
+                    <li>Communication records (emails, chat logs)</li>
+                </ul>
+                
+                <h3>Automated Data</h3>
+                <p>We automatically collect:</p>
+                <ul>
+                    <li>IP address and browser type</li>
+                    <li>Pages visited and time spent</li>
+                    <li>Cookies (see our <a href="#cookies">Cookie Policy</a>)</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>How We Use Your Information</h2>
+                <ul>
+                    <li>To provide and maintain our services</li>
+                    <li>To process transactions</li>
+                    <li>To communicate with you</li>
+                    <li>To improve our website and services</li>
+                    <li>For security and fraud prevention</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Data Sharing & Disclosure</h2>
+                <p>We only share data under these circumstances:</p>
+                <ul>
+                    <li><strong>Service Providers:</strong> With trusted third parties who assist in operations (e.g., payment processors, cloud hosting)</li>
+                    <li><strong>Legal Compliance:</strong> When required by law or to protect our rights</li>
+                    <li><strong>Business Transfers:</strong> In connection with a merger or acquisition</li>
+                </ul>
+                
+                <div class="highlight">
+                    <p>We require all third parties to maintain confidentiality and security of your data.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section" id="cookies">
+                <h2>Cookies & Tracking</h2>
+                <p>We use cookies to:</p>
+                <ul>
+                    <li>Analyze website traffic</li>
+                    <li>Remember preferences</li>
+                    <li>Improve user experience</li>
+                </ul>
+                <p>You can disable cookies in your browser settings, but some features may not function properly.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Data Security</h2>
+                <p>We implement:</p>
+                <ul>
+                    <li>SSL/TLS encryption</li>
+                    <li>Regular security audits</li>
+                    <li>Access controls</li>
+                    <li>Secure data storage</li>
+                </ul>
+                <p>While we strive to protect your data, no method is 100% secure.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Your Rights</h2>
+                <p>You may:</p>
+                <ul>
+                    <li>Request access to your data</li>
+                    <li>Request corrections</li>
+                    <li>Request deletion (where applicable)</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+                <p>Contact us at <a href="mailto:privacy@primevaservice.com">privacy@primevaservice.com</a> to exercise these rights.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Changes to This Policy</h2>
+                <p>We may update this policy periodically. The "Last Updated" date at the top will reflect changes. Material changes will be communicated via email or website notice.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Contact Us</h2>
+                <p>For privacy-related inquiries:</p>
+                <p>Email: <a href="mailto:privacy@primevaservice.com">privacy@primevaservice.com</a></p>
+                <p>Address: 123 Business Street, Suite 456, Virtual Office</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Prime VA Service provides top-tier virtual assistance to businesses worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> info@primevaservice.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Prime VA Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle (reused from other pages)
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
