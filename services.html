@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Prime VA Service</title>
+    <title>Services - Prime VA Service</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,16 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;      /* Vibrant blue */
-            --primary-dark: #1d4ed8;  /* Darker blue */
-            --primary-light: #3b82f6; /* Lighter blue */
-            --secondary: #7c3aed;     /* Elegant purple */
-            --accent: #10b981;       /* Fresh teal */
-            --light: #f8fafc;        /* Very light gray */
-            --dark: #1e293b;         /* Dark navy */
-            --darker: #0f172a;        /* Almost black */
-            --gray: #64748b;         /* Medium gray */
-            --light-gray: #e2e8f0;   /* Light gray */
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #7c3aed;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --darker: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -139,124 +139,48 @@
         }
 
         /* Hero Section */
-        .services-hero {
-            height: 60vh;
-            min-height: 500px;
+        .hero {
+            height: 50vh;
+            min-height: 400px;
             display: flex;
             align-items: center;
+            justify-content: center;
             background: var(--gradient-primary), 
-                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding-top: 80px;
             position: relative;
-            overflow: hidden;
         }
 
-        .services-hero:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(to top, rgba(248, 250, 252, 1) 0%, rgba(248, 250, 252, 0) 100%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .services-hero h1 {
-            font-size: 3.5rem;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 20px;
-            line-height: 1.2;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .services-hero p {
+        .hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 16px 32px;
-            background-color: white;
-            color: var(--primary);
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
-            transform: translateX(-100%);
-            transition: var(--transition);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .cta-button:hover:after {
-            transform: translateX(100%);
-        }
-
-        .cta-button.secondary {
-            background-color: transparent;
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            margin-left: 15px;
-        }
-
-        .cta-button.secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-color: white;
+            margin: 0 auto 30px;
+            opacity: 0.9;
         }
 
         /* Services Section */
-        .services {
-            padding: 100px 0;
+        .features {
+            padding: 80px 0;
             background-color: white;
         }
 
-        .section-title {
+        .features h2 {
             text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
             font-size: 2.5rem;
+            margin-bottom: 60px;
             color: var(--darker);
             position: relative;
-            display: inline-block;
-            margin-bottom: 15px;
         }
 
-        .section-title h2:after {
+        .features h2:after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -268,30 +192,28 @@
             border-radius: 2px;
         }
 
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
+        .feature-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .service-card {
+        .feature-card {
             background-color: white;
             border-radius: 12px;
-            padding: 40px 30px;
+            padding: 30px;
             transition: var(--transition);
             box-shadow: var(--shadow);
             border: 1px solid var(--light-gray);
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .service-card:before {
+        .feature-card:before {
             content: '';
             position: absolute;
             top: 0;
@@ -302,16 +224,16 @@
             transition: var(--transition);
         }
 
-        .service-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
-        .service-card:hover:before {
+        .feature-card:hover:before {
             height: 100%;
         }
 
-        .service-icon {
+        .feature-card i {
             font-size: 2.5rem;
             margin-bottom: 20px;
             background: var(--gradient-primary);
@@ -320,186 +242,47 @@
             color: transparent;
         }
 
-        .service-card h3 {
+        .feature-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: var(--darker);
         }
 
-        .service-card p {
+        .feature-card p {
             color: var(--gray);
-            margin-bottom: 25px;
-        }
-
-        .service-link {
-            display: inline-block;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .service-link:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-            transition: var(--transition);
-        }
-
-        .service-link:hover {
-            color: var(--primary-dark);
-        }
-
-        .service-link:hover:after {
-            width: 100%;
-        }
-
-        /* CTA Section */
-        .services-cta {
-            padding: 100px 0;
-            background: var(--gradient-accent), 
-                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-
-        .services-cta:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .services-cta .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .services-cta h2 {
-            font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .services-cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
+        .feature-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .feature-card a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
         footer {
             background-color: var(--darker);
             color: white;
-            padding: 80px 0 30px;
-            position: relative;
-        }
-
-        footer:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
-            opacity: 0.5;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-            color: white;
-        }
-
-        .footer-section h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--gradient-primary);
-        }
-
-        .footer-section p, .footer-section a {
-            color: var(--light-gray);
-            margin-bottom: 10px;
-            display: block;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-section a:hover {
-            color: white;
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin-right: 10px;
-            color: white;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--gradient-primary);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .footer-bottom {
+            padding: 30px 0;
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--light-gray);
+        }
+
+        footer p {
+            margin: 0;
             font-size: 0.9rem;
-            position: relative;
-            z-index: 2;
         }
 
         /* Responsive Design */
-        @media (max-width: 992px) {
-            .services-hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
-        }
-
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
@@ -530,55 +313,28 @@
                 margin: 15px 0;
             }
             
-            .services-hero h1 {
+            .hero h1 {
                 font-size: 2.2rem;
             }
             
-            .services-hero p {
+            .hero p {
                 font-size: 1rem;
-            }
-            
-            .cta-buttons {
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .cta-button.secondary {
-                margin-left: 0;
-                margin-top: 15px;
             }
         }
 
         @media (max-width: 576px) {
-            .services-hero {
-                min-height: 400px;
-                height: 50vh;
+            .hero {
+                min-height: 350px;
+                height: 40vh;
             }
             
-            .services-hero h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
+            .features h2 {
+                font-size: 1.8rem;
             }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animations */
-        .animate-delay-1 {
-            animation-delay: 0.2s;
-        }
-        
-        .animate-delay-2 {
-            animation-delay: 0.4s;
-        }
-        
-        .animate-delay-3 {
-            animation-delay: 0.6s;
         }
     </style>
 </head>
@@ -593,7 +349,7 @@
             <nav id="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="book-a-call.html">Book a Call</a></li>
                 </ul>
             </nav>
@@ -601,148 +357,68 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="services-hero">
+    <section class="hero">
         <div class="container">
-            <div class="hero-content animate__animated animate__fadeInUp">
-                <h1>Our Premium Services</h1>
-                <p>Discover how our specialized virtual assistance can transform your business operations</p>
-                <button class="cta-button animate__animated animate__fadeInUp animate__delay-1s" onclick="location.href='book-a-call.html'">Get Started Today</button>
-            </div>
+            <h1 class="animate__animated animate__fadeInUp">Our Services</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Explore the range of professional services we offer to help your business thrive</p>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="features">
         <div class="container">
-            <div class="section-title animate__animated animate__fadeIn">
-                <h2>Comprehensive Virtual Assistance</h2>
-                <p>We offer a wide range of professional services tailored to meet your business needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card animate__animated animate__fadeInUp animate-delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
+            <h2 class="animate__animated animate__fadeIn">What We Offer</h2>
+            <div class="feature-cards">
+                <div class="feature-card animate__animated animate__fadeInUp">
+                    <i class="fas fa-briefcase"></i>
                     <h3>Executive Assistant</h3>
-                    <p>Professional support for your executive needs including calendar management, email handling, and business correspondence.</p>
-                    <a href="executive-assistant.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <p>Professional support for your business operations and management needs.</p>
+                    <a href="executive-assistant.html">Learn More</a>
                 </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp animate-delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
+                <div class="feature-card animate__animated animate__fadeInUp animate-delay-1">
+                    <i class="fas fa-headset"></i>
                     <h3>Customer Service</h3>
-                    <p>Outstanding SDR and customer support experts to handle inquiries, complaints, and customer relations.</p>
-                    <a href="customer-service.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <p>SDR and customer support experts to enhance your client relationships.</p>
+                    <a href="customer-service.html">Learn More</a>
                 </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp animate-delay-3">
-                    <div class="service-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
+                <div class="feature-card animate__animated animate__fadeInUp animate-delay-2">
+                    <i class="fas fa-truck"></i>
                     <h3>Dispatcher</h3>
-                    <p>Efficient dispatching services to coordinate your operations, logistics, and field personnel.</p>
-                    <a href="dispatcher.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <p>Efficient dispatching services to streamline your operations.</p>
+                    <a href="dispatcher.html">Learn More</a>
                 </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp">
-                    <div class="service-icon">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
+                <div class="feature-card animate__animated animate__fadeInUp">
+                    <i class="fas fa-hashtag"></i>
                     <h3>Social Media Management</h3>
-                    <p>Comprehensive social media strategy, content creation, and community management.</p>
-                    <a href="social-media-management.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <p>Professional management of your social media presence and growth strategies.</p>
+                    <a href="social-media-management.html">Learn More</a>
                 </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp animate-delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
+                <div class="feature-card animate__animated animate__fadeInUp animate-delay-1">
+                    <i class="fas fa-bullhorn"></i>
                     <h3>Digital Marketing</h3>
-                    <p>Strategic digital marketing campaigns including SEO, PPC, email marketing, and content marketing.</p>
-                    <a href="digital-marketing.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <p>Comprehensive digital marketing solutions to reach your target audience.</p>
+                    <a href="digital-marketing.html">Learn More</a>
                 </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp animate-delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
+                <div class="feature-card animate__animated animate__fadeInUp animate-delay-2">
+                    <i class="fas fa-database"></i>
                     <h3>Data Entry</h3>
-                    <p>Accurate and efficient data processing, database management, and information organization.</p>
-                    <a href="data-entry.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <p>Accurate and efficient data management services for your business.</p>
+                    <a href="data-entry.html">Learn More</a>
                 </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp animate-delay-3">
-                    <div class="service-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
+                <div class="feature-card animate__animated animate__fadeInUp">
+                    <i class="fas fa-book"></i>
                     <h3>Bookkeeping</h3>
-                    <p>Professional financial record keeping, invoicing, expense tracking, and financial reporting.</p>
-                    <a href="bookkeeping.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp">
-                    <div class="service-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Management</h3>
-                    <p>Efficient organization, filtering, and response handling for your business email accounts.</p>
-                    <a href="email-management.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card animate__animated animate__fadeInUp animate-delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Calendar Management</h3>
-                    <p>Professional scheduling, appointment setting, and calendar organization services.</p>
-                    <a href="calendar-management.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <p>Professional financial record management to keep your business compliant.</p>
+                    <a href="bookkeeping.html">Learn More</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="services-cta">
-        <div class="container">
-            <h2 class="animate__animated animate__fadeIn">Need a Custom Solution?</h2>
-            <p class="animate__animated animate__fadeIn animate__delay-1s">We specialize in creating tailored virtual assistance packages to meet your unique business requirements.</p>
-            <button class="cta-button animate__animated animate__fadeIn animate__delay-2s" onclick="location.href='book-a-call.html'">Book Your Free Consultation</button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>Prime VA Service provides top-tier virtual assistance to businesses worldwide, helping them scale efficiently.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="book-a-call.html">Book a Call</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Suite 456</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> info@primevaservice.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Prime VA Service. All rights reserved.</p>
-            </div>
+            <p>&copy; 2023 Prime VA Service. All rights reserved.</p>
         </div>
     </footer>
 
