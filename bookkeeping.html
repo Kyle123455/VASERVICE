@@ -603,6 +603,21 @@
             animation-delay: 0.6s;
         }
     </style>
+    <script>
+  // Redirect clean URLs (without .html) to the actual .html files
+  const currentPath = window.location.pathname;
+  
+  // If URL ends with '/something' (missing .html) but isn't a folder
+  if (!currentPath.includes('.html') && !currentPath.endsWith('/')) {
+    // Check if this is a known page
+    const validPages = ['services', 'book-a-call', 'privacy']; // Add all your page names
+    const pageName = currentPath.split('/').pop();
+    
+    if (validPages.includes(pageName)) {
+      window.location.href = currentPath + '.html';
+    }
+  }
+</script>
 </head>
 <body>
     <!-- Header -->
