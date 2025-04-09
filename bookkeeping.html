@@ -614,9 +614,9 @@
             </button>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="book-a-call.html">Book a Call</a></li>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="book-a-call">Book a Call</a></li>
                 </ul>
             </nav>
         </div>
@@ -628,7 +628,7 @@
             <div class="hero-content animate__animated animate__fadeInUp">
                 <h1>Professional Bookkeeping Services</h1>
                 <p>Accurate financial record-keeping to keep your business financially healthy and compliant</p>
-                <button class="cta-button animate__animated animate__fadeInUp animate__delay-1s" onclick="location.href='book-a-call.html'">Get Started Today</button>
+                <button class="cta-button animate__animated animate__fadeInUp animate__delay-1s" onclick="location.href='book-a-call'">Get Started Today</button>
             </div>
         </div>
     </section>
@@ -732,10 +732,10 @@
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="book-a-call.html">Book a Call</a>
-                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="index">Home</a>
+                    <a href="services">Services</a>
+                    <a href="book-a-call">Book a Call</a>
+                    <a href="privacy">Privacy Policy</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
@@ -769,5 +769,19 @@
             }
         });
     </script>
+    <script>
+  // Remove .html from URL in browser address bar
+  if (window.location.pathname.includes('.html')) {
+    const cleanUrl = window.location.pathname
+      .replace('.html', '')
+      .replace('index', '');
+    history.replaceState({}, '', cleanUrl);
+  }
+
+  // Update ALL links on the page to remove .html
+  document.querySelectorAll('a[href$=".html"]').forEach(link => {
+    link.setAttribute('href', link.getAttribute('href').replace('.html', ''));
+  });
+</script>
 </body>
 </html>
