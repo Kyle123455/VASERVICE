@@ -253,11 +253,14 @@
             box-shadow: var(--shadow);
             overflow: hidden;
             border: 1px solid var(--light-gray);
+            height: 700px;
         }
 
         .calendly-inline-widget {
-            min-height: 700px;
-            width: 100%;
+            min-height: 700px !important;
+            height: 100% !important;
+            width: 100% !important;
+            overflow: hidden !important;
         }
 
         /* FAQ Section */
@@ -490,6 +493,14 @@
             .booking-container {
                 flex-direction: column;
             }
+
+            .booking-widget {
+                height: 600px;
+            }
+
+            .calendly-inline-widget {
+                min-height: 600px !important;
+            }
         }
 
         @media (max-width: 576px) {
@@ -585,7 +596,9 @@
                 </div>
                 
                 <div class="booking-widget animate__animated animate__fadeInRight">
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/sweetmuffin-07/discover-call"></div>
+                    <div class="calendly-inline-widget" 
+                         data-url="https://calendly.com/sweetmuffin-07/discover-call" 
+                         style="min-width:320px;height:700px;"></div>
                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 </div>
             </div>
@@ -667,9 +680,9 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Suite 456</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> info@primevaservice.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Philippines</p>
+                    <p><i class="fab fa-whatsapp"></i> +63 (998) 440-4003</p>
+                    <p><i class="fas fa-envelope"></i> mprimicias@primevaservice.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -711,6 +724,22 @@
                     }
                 });
             });
+        });
+
+        // Initialize Calendly widget
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initInlineWidget({
+                    url: 'https://calendly.com/sweetmuffin-07/discover-call',
+                    parentElement: document.querySelector('.calendly-inline-widget'),
+                    prefill: {},
+                    utm: {},
+                    style: {
+                        minWidth: '320px',
+                        height: '700px'
+                    }
+                });
+            }
         });
     </script>
 </body>
