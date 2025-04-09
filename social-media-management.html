@@ -614,7 +614,7 @@
             </button>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Home">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="book-a-call.html">Book a Call</a></li>
                 </ul>
@@ -769,5 +769,19 @@
             }
         });
     </script>
+    <script>
+  // Remove .html from URL in browser address bar
+  if (window.location.pathname.includes('.html')) {
+    const cleanUrl = window.location.pathname
+      .replace('.html', '')
+      .replace('index', '');
+    history.replaceState({}, '', cleanUrl);
+  }
+
+  // Update ALL links on the page to remove .html
+  document.querySelectorAll('a[href$=".html"]').forEach(link => {
+    link.setAttribute('href', link.getAttribute('href').replace('.html', ''));
+  });
+</script>
 </body>
 </html>
