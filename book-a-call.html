@@ -758,18 +758,31 @@
         });
     </script>
     <script>
-  // Remove .html from URL in browser address bar
+  // ===== 1. FORCE CLEAN URLS ON LOAD =====
+  // Remove .html from ALL page URLs (e.g., "/services.html" → "/services")
   if (window.location.pathname.includes('.html')) {
-    const cleanUrl = window.location.pathname
-      .replace('.html', '')
-      .replace('index', '');
+    const cleanUrl = window.location.pathname.replace('.html', '');
     history.replaceState({}, '', cleanUrl);
   }
 
-  // Update ALL links on the page to remove .html
-  document.querySelectorAll('a[href$=".html"]').forEach(link => {
-    link.setAttribute('href', link.getAttribute('href').replace('.html', ''));
+  // ===== 2. HANDLE HOME LINK CLICKS =====
+  // When Home is clicked, show "/home" but load root (index.html)
+  document.querySelectorAll('a[href="/"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.location.pathname !== '/') {
+        e.preventDefault();
+        window.location.href = '/'; // Load root page
+        setTimeout(() => {
+          history.replaceState({}, '', '/home'); // Change URL after load
+        }, 10);
+      }
+    });
   });
+
+  // ===== 3. REDIRECT "/home" TO ROOT =====
+  if (window.location.pathname === '/home') {
+    history.replaceState({}, '', '/');
+  }
 </script>
 </body>
 </html>
