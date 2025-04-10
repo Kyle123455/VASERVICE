@@ -457,17 +457,23 @@
         });
     </script>
     <script>
-  // Remove .html from URL in browser address bar
-  if (window.location.pathname.includes('.html')) {
-    const cleanUrl = window.location.pathname
-      .replace('.html', '')
-      .replace('index', '');
-    history.replaceState({}, '', cleanUrl);
-  }
+  <script>
+  // Handle Home link clicks
+  document.querySelectorAll('a[href="/"], a[href="/home"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.location.pathname !== '/') {
+        e.preventDefault();
+        window.location.href = '/'; // Force full reload to root
+        history.replaceState({}, '', '/home'); // Override URL after load
+      }
+    });
+  });
 
-  // Update ALL links on the page to remove .html
-  document.querySelectorAll('a[href$=".html"]').forEach(link => {
-    link.setAttribute('href', link.getAttribute('href').replace('.html', ''));
+  // Fix direct "/home" visits
+  if (window.location.pathname === '/home') {
+    history.replaceState({}, '', '/');
+  }
+</script>
   });
 </script>
 </body>
