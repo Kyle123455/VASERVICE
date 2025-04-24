@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Virtual Assistants | Prime VA Service (24-Hour Onboarding)</title>
+    <title>Hire US-Based Virtual Assistants | Prime VA Service (24-Hour Onboarding)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -833,51 +833,12 @@
         .floating {
             animation: float 6s ease-in-out infinite;
         }
-            /* Add this to your existing CSS */
-    .checkbox-group {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
-        margin-top: 10px;
-    }
-    
-    .checkbox-group label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: normal;
-        cursor: pointer;
-    }
-    
-    .checkbox-group input[type="checkbox"] {
-        width: auto;
-        margin: 0;
-    }
-    
-    optgroup {
-        font-weight: bold;
-        font-style: normal;
-        color: var(--dark);
-    }
-    
-    optgroup option {
-        font-weight: normal;
-        padding-left: 15px;
-    }
     </style>
     <script>
         // Redirect /home to the root (index.html)
         if (window.location.pathname === '/home') {
             window.history.replaceState({}, '', '/');
         }
-         // Show/hide "other business type" field based on selection
-    document.getElementById('business-type').addEventListener('change', function() {
-        const otherContainer = document.getElementById('other-business-type-container');
-        otherContainer.style.display = this.value === 'other' ? 'block' : 'none';
-        if (this.value !== 'other') {
-            document.getElementById('other-business-type').value = '';
-        }
-    });
     </script>
 </head>
 <body>
@@ -902,8 +863,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content animate__animated animate__fadeInUp">
-                <h1>Hire a Top 1% Virtual Assistant – Ready in 24 Hours!</h1>
-                <p>Stop wasting time on admin tasks. Get a dedicated VA for just $8/hr – fast onboarding.</p>
+                <h1>Hire a Top 1% US-Based Virtual Assistant – Ready in 24 Hours!</h1>
+                <p>Stop wasting time on admin tasks. Get a dedicated VA for just $8/hr – no contracts, fast onboarding.</p>
                 <div class="cta-buttons">
                     <button class="cta-button animate__animated animate__fadeInUp animate__delay-1s" onclick="location.href='#lead-form'">BOOK A FREE CONSULTATION</button>
                     <button class="cta-button secondary animate__animated animate__fadeInUp animate__delay-2s" onclick="location.href='services.html'">Explore Our Services</button>
@@ -916,16 +877,17 @@
     </section>
 
     <!-- NEW: Video Section (Stock Video) -->
-   <section class="container">
+    <section class="container">
         <div class="video-container animate__animated animate__fadeIn">
-            <video width="100%" controls poster="https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-her-laptop-while-having-a-video-call-3981-large.png">
+            <video width="100%" autoplay loop muted playsinline>
+                <!-- Stock video from Pexels (remote work theme) -->
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-her-laptop-while-having-a-video-call-3981-large.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="video-overlay" onclick="this.parentElement.querySelector('video').play()">
+            <div class="video-overlay">
                 <h3>How Prime VA Service Works</h3>
                 <p>We match you with a skilled assistant in 24 hours or less</p>
-                <div class="play-button">
+                <div class="play-button" onclick="this.parentElement.parentElement.querySelector('video').play()">
                     <i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>
                 </div>
             </div>
@@ -985,105 +947,38 @@
 
     <!-- Lead Form Section -->
     <section class="lead-form-section" id="lead-form">
-    <div class="container">
-        <div class="lead-form-container animate__animated animate__fadeIn">
-            <h2>Get Your Free VA Strategy Session</h2>
-            <p>Schedule a 30-minute call to discuss how we can help your business</p>
-            <form id="va-contact-form" action="https://formspree.io/f/mpwdzggo"
-                  method="POST"
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="business-type">Business Type</label>
-                    <select id="business-type" name="business-type" required>
-                        <option value="">Select your industry...</option>
-                        
-                        <!-- Professional Services -->
-                        <optgroup label="Professional Services">
-                            <option value="real-estate">Real Estate</option>
-                            <option value="law-firm">Law Firm/Legal Services</option>
-                            <option value="accounting">Accounting/Financial Services</option>
-                            <option value="consulting">Business Consulting</option>
-                            <option value="coaching">Coaching (Life/Business)</option>
-                            <option value="marketing">Marketing Agency</option>
-                        </optgroup>
-                        
-                        <!-- E-Commerce & Retail -->
-                        <optgroup label="E-Commerce & Retail">
-                            <option value="ecommerce-shopify">E-Commerce (Shopify)</option>
-                            <option value="ecommerce-woocommerce">E-Commerce (WooCommerce)</option>
-                            <option value="ecommerce-amazon">Amazon FBA Seller</option>
-                            <option value="dropshipping">Dropshipping Business</option>
-                            <option value="retail">Retail Business</option>
-                        </optgroup>
-                        
-                        <!-- Technology & Creative -->
-                        <optgroup label="Technology & Creative">
-                            <option value="saas">SaaS Company</option>
-                            <option value="web-dev">Web Development</option>
-                            <option value="design">Graphic/Web Design</option>
-                            <option value="content-creation">Content Creation</option>
-                            <option value="video-production">Video Production</option>
-                        </optgroup>
-                        
-                        <!-- Health & Wellness -->
-                        <optgroup label="Health & Wellness">
-                            <option value="medical">Medical Practice</option>
-                            <option value="dentistry">Dental Practice</option>
-                            <option value="fitness">Fitness/Personal Training</option>
-                            <option value="nutrition">Nutrition/Wellness</option>
-                            <option value="mental-health">Mental Health Practice</option>
-                        </optgroup>
-                        
-                        <!-- Other Industries -->
-                        <optgroup label="Other Industries">
-                            <option value="nonprofit">Nonprofit Organization</option>
-                            <option value="education">Education/Tutoring</option>
-                            <option value="construction">Construction/Contracting</option>
-                            <option value="manufacturing">Manufacturing</option>
-                            <option value="other">Other (Please Specify)</option>
-                        </optgroup>
-                    </select>
-                </div>
-                
-                <!-- Additional field that appears only when "Other" is selected -->
-                <div class="form-group" id="other-business-type-container" style="display: none;">
-                    <label for="other-business-type">Please specify your business type</label>
-                    <input type="text" id="other-business-type" name="other-business-type">
-                </div>
-                
-                <div class="form-group">
-                    <label for="va-needs">What VA services are you interested in? (Select all that apply)</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="va-needs" value="admin-support"> Administrative Support</label>
-                        <label><input type="checkbox" name="va-needs" value="email-management"> Email Management</label>
-                        <label><input type="checkbox" name="va-needs" value="calendar-management"> Calendar Management</label>
-                        <label><input type="checkbox" name="va-needs" value="data-entry"> Data Entry</label>
-                        <label><input type="checkbox" name="va-needs" value="customer-service"> Customer Service</label>
-                        <label><input type="checkbox" name="va-needs" value="social-media"> Social Media Management</label>
-                        <label><input type="checkbox" name="va-needs" value="content-writing"> Content Writing</label>
-                        <label><input type="checkbox" name="va-needs" value="bookkeeping"> Bookkeeping</label>
-                        <label><input type="checkbox" name="va-needs" value="research"> Research</label>
-                        <label><input type="checkbox" name="va-needs" value="ecommerce-support"> E-Commerce Support</label>
-                        <label><input type="checkbox" name="va-needs" value="real-estate-support"> Real Estate Support</label>
+        <div class="container">
+            <div class="lead-form-container animate__animated animate__fadeIn">
+                <h2>Get Your Free VA Strategy Session</h2>
+                <p>Schedule a 30-minute call to discuss how we can help your business</p>
+                <form id="va-contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">How Can We Help? (Optional)</label>
-                    <textarea id="message" name="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="cta-button" style="width: 100%;">BOOK MY FREE CALL NOW</button>
-            </form>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-type">Business Type</label>
+                        <select id="business-type" name="business-type" required>
+                            <option value="">Select one...</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="ecommerce">E-Commerce</option>
+                            <option value="coaching">Coaching/Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How Can We Help? (Optional)</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button" style="width: 100%;">BOOK MY FREE CALL NOW</button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
@@ -1120,7 +1015,7 @@
     <section class="cta-section">
         <div class="container">
             <h2 class="animate__animated animate__fadeIn">Ready to Get 15+ Hours Back Each Week?</h2>
-            <p class="animate__animated animate__fadeIn animate__delay-1s">Our virtual assistants start at just $8/hour with no long-term contracts.</p>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">Our US-based virtual assistants start at just $8/hour with no long-term contracts.</p>
             <button class="cta-button animate__animated animate__fadeIn animate__delay-2s" onclick="location.href='#lead-form'">Get Started Today</button>
         </div>
     </section>
@@ -1131,7 +1026,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About Us</h3>
-                    <p>Prime VA Service provides top-tier virtual assistants to help businesses scale efficiently.</p>
+                    <p>Prime VA Service provides top-tier US-based virtual assistants to help businesses scale efficiently.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
