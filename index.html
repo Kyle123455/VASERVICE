@@ -879,19 +879,19 @@
     <!-- NEW: Video Section (Stock Video) -->
     <section class="container">
         <div class="video-container animate__animated animate__fadeIn">
-            <video width="100%" autoplay loop muted playsinline>
-                <!-- Stock video from Pexels (remote work theme) -->
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-her-laptop-while-having-a-video-call-3981-large.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay">
-                <h3>How Prime VA Service Works</h3>
-                <p>We match you with a skilled assistant in 24 hours or less</p>
-                <div class="play-button" onclick="this.parentElement.parentElement.querySelector('video').play()">
-                    <i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>
-                </div>
+        <video width="100%" loop muted playsinline id="va-video">
+            <!-- Stock video from Pexels (remote work theme) -->
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-her-laptop-while-having-a-video-call-3981-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="videoOverlay">
+            <h3>How Prime VA Service Works</h3>
+            <p>We match you with a skilled assistant in 24 hours or less</p>
+            <div class="play-button" id="playButton">
+                <i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- Features Section -->
@@ -1033,7 +1033,32 @@
                 header.classList.remove('scrolled');
             }
         });
+        
+ // Video Play Button Functionality
+    const video = document.getElementById('va-video');
+    const playButton = document.getElementById('playButton');
+    const videoOverlay = document.getElementById('videoOverlay');
 
+    playButton.addEventListener('click', function() {
+        if (video.paused) {
+            video.play();
+            videoOverlay.style.opacity = '0';
+            videoOverlay.style.pointerEvents = 'none';
+            playButton.innerHTML = '<i class="fas fa-pause" style="color: white; font-size: 20px;"></i>';
+        } else {
+            video.pause();
+            videoOverlay.style.opacity = '1';
+            videoOverlay.style.pointerEvents = 'auto';
+            playButton.innerHTML = '<i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>';
+        }
+    });
+
+    // Show overlay again when video ends
+    video.addEventListener('ended', function() {
+        videoOverlay.style.opacity = '1';
+        videoOverlay.style.pointerEvents = 'auto';
+        playButton.innerHTML = '<i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>';
+    });
         // Testimonials Carousel
         const testimonialsContainer = document.getElementById('testimonialsContainer');
         const testimonialCards = document.querySelectorAll('.testimonial-card');
