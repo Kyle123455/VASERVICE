@@ -236,64 +236,6 @@
             border-color: white;
         }
 
-        /* Video Section - NEW: Optimized for conversions */
-        .video-container {
-            margin: 60px auto;
-            max-width: 800px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            position: relative;
-        }
-
-        .video-container video {
-            width: 100%;
-            display: block;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-        }
-
-        .video-overlay h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-overlay p {
-            max-width: 500px;
-            margin-bottom: 20px;
-        }
-
-        .play-button {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .play-button:hover {
-            transform: scale(1.1);
-        }
-
         /* Features Section */
         .features {
             padding: 100px 0;
@@ -777,9 +719,6 @@
             .testimonial-card {
                 flex: 0 0 100%;
             }
-            .video-container {
-                margin: 40px auto;
-            }
         }
 
         @media (max-width: 576px) {
@@ -876,24 +815,6 @@
         </div>
     </section>
 
-    <!-- NEW: Video Section (Stock Video) -->
-    <section class="container">
-        <div class="video-container animate__animated animate__fadeIn">
-        <video width="100%" loop muted playsinline id="va-video">
-            <!-- Stock video from Pexels (remote work theme) -->
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-her-laptop-while-having-a-video-call-3981-large.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-overlay" id="videoOverlay">
-            <h3>How Prime VA Service Works</h3>
-            <p>We match you with a skilled assistant in 24 hours or less</p>
-            <div class="play-button" id="playButton">
-                <i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>
-            </div>
-        </div>
-    </div>
-    </section>
-
     <!-- Features Section -->
     <section class="features">
         <div class="container">
@@ -945,9 +866,7 @@
         </div>
     </section>
 
-    
-
-<!-- Testimonials Section -->
+    <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
             <div class="section-title animate__animated animate__fadeIn">
@@ -1033,32 +952,7 @@
                 header.classList.remove('scrolled');
             }
         });
-        
- // Video Play Button Functionality
-    const video = document.getElementById('va-video');
-    const playButton = document.getElementById('playButton');
-    const videoOverlay = document.getElementById('videoOverlay');
 
-    playButton.addEventListener('click', function() {
-        if (video.paused) {
-            video.play();
-            videoOverlay.style.opacity = '0';
-            videoOverlay.style.pointerEvents = 'none';
-            playButton.innerHTML = '<i class="fas fa-pause" style="color: white; font-size: 20px;"></i>';
-        } else {
-            video.pause();
-            videoOverlay.style.opacity = '1';
-            videoOverlay.style.pointerEvents = 'auto';
-            playButton.innerHTML = '<i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>';
-        }
-    });
-
-    // Show overlay again when video ends
-    video.addEventListener('ended', function() {
-        videoOverlay.style.opacity = '1';
-        videoOverlay.style.pointerEvents = 'auto';
-        playButton.innerHTML = '<i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>';
-    });
         // Testimonials Carousel
         const testimonialsContainer = document.getElementById('testimonialsContainer');
         const testimonialCards = document.querySelectorAll('.testimonial-card');
