@@ -833,12 +833,51 @@
         .floating {
             animation: float 6s ease-in-out infinite;
         }
+            /* Add this to your existing CSS */
+    .checkbox-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .checkbox-group label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: normal;
+        cursor: pointer;
+    }
+    
+    .checkbox-group input[type="checkbox"] {
+        width: auto;
+        margin: 0;
+    }
+    
+    optgroup {
+        font-weight: bold;
+        font-style: normal;
+        color: var(--dark);
+    }
+    
+    optgroup option {
+        font-weight: normal;
+        padding-left: 15px;
+    }
     </style>
     <script>
         // Redirect /home to the root (index.html)
         if (window.location.pathname === '/home') {
             window.history.replaceState({}, '', '/');
         }
+         // Show/hide "other business type" field based on selection
+    document.getElementById('business-type').addEventListener('change', function() {
+        const otherContainer = document.getElementById('other-business-type-container');
+        otherContainer.style.display = this.value === 'other' ? 'block' : 'none';
+        if (this.value !== 'other') {
+            document.getElementById('other-business-type').value = '';
+        }
+    });
     </script>
 </head>
 <body>
@@ -877,17 +916,16 @@
     </section>
 
     <!-- NEW: Video Section (Stock Video) -->
-    <section class="container">
+   <section class="container">
         <div class="video-container animate__animated animate__fadeIn">
-            <video width="100%" autoplay loop muted playsinline>
-                <!-- Stock video from Pexels (remote work theme) -->
+            <video width="100%" controls poster="https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-her-laptop-while-having-a-video-call-3981-large.png">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-her-laptop-while-having-a-video-call-3981-large.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="video-overlay">
+            <div class="video-overlay" onclick="this.parentElement.querySelector('video').play()">
                 <h3>How Prime VA Service Works</h3>
                 <p>We match you with a skilled assistant in 24 hours or less</p>
-                <div class="play-button" onclick="this.parentElement.parentElement.querySelector('video').play()">
+                <div class="play-button">
                     <i class="fas fa-play" style="color: white; font-size: 20px; margin-left: 3px;"></i>
                 </div>
             </div>
@@ -947,38 +985,104 @@
 
     <!-- Lead Form Section -->
     <section class="lead-form-section" id="lead-form">
-        <div class="container">
-            <div class="lead-form-container animate__animated animate__fadeIn">
-                <h2>Get Your Free VA Strategy Session</h2>
-                <p>Schedule a 30-minute call to discuss how we can help your business</p>
-                <form id="va-contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="business-type">Business Type</label>
-                        <select id="business-type" name="business-type" required>
-                            <option value="">Select one...</option>
+    <div class="container">
+        <div class="lead-form-container animate__animated animate__fadeIn">
+            <h2>Get Your Free VA Strategy Session</h2>
+            <p>Schedule a 30-minute call to discuss how we can help your business</p>
+            <form id="va-contact-form" action="https://formspree.io/f/mpwdzggo" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="business-type">Business Type</label>
+                    <select id="business-type" name="business-type" required>
+                        <option value="">Select your industry...</option>
+                        
+                        <!-- Professional Services -->
+                        <optgroup label="Professional Services">
                             <option value="real-estate">Real Estate</option>
-                            <option value="ecommerce">E-Commerce</option>
-                            <option value="coaching">Coaching/Consulting</option>
-                            <option value="other">Other</option>
-                        </select>
+                            <option value="law-firm">Law Firm/Legal Services</option>
+                            <option value="accounting">Accounting/Financial Services</option>
+                            <option value="consulting">Business Consulting</option>
+                            <option value="coaching">Coaching (Life/Business)</option>
+                            <option value="marketing">Marketing Agency</option>
+                        </optgroup>
+                        
+                        <!-- E-Commerce & Retail -->
+                        <optgroup label="E-Commerce & Retail">
+                            <option value="ecommerce-shopify">E-Commerce (Shopify)</option>
+                            <option value="ecommerce-woocommerce">E-Commerce (WooCommerce)</option>
+                            <option value="ecommerce-amazon">Amazon FBA Seller</option>
+                            <option value="dropshipping">Dropshipping Business</option>
+                            <option value="retail">Retail Business</option>
+                        </optgroup>
+                        
+                        <!-- Technology & Creative -->
+                        <optgroup label="Technology & Creative">
+                            <option value="saas">SaaS Company</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="design">Graphic/Web Design</option>
+                            <option value="content-creation">Content Creation</option>
+                            <option value="video-production">Video Production</option>
+                        </optgroup>
+                        
+                        <!-- Health & Wellness -->
+                        <optgroup label="Health & Wellness">
+                            <option value="medical">Medical Practice</option>
+                            <option value="dentistry">Dental Practice</option>
+                            <option value="fitness">Fitness/Personal Training</option>
+                            <option value="nutrition">Nutrition/Wellness</option>
+                            <option value="mental-health">Mental Health Practice</option>
+                        </optgroup>
+                        
+                        <!-- Other Industries -->
+                        <optgroup label="Other Industries">
+                            <option value="nonprofit">Nonprofit Organization</option>
+                            <option value="education">Education/Tutoring</option>
+                            <option value="construction">Construction/Contracting</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="other">Other (Please Specify)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <!-- Additional field that appears only when "Other" is selected -->
+                <div class="form-group" id="other-business-type-container" style="display: none;">
+                    <label for="other-business-type">Please specify your business type</label>
+                    <input type="text" id="other-business-type" name="other-business-type">
+                </div>
+                
+                <div class="form-group">
+                    <label for="va-needs">What VA services are you interested in? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="va-needs" value="admin-support"> Administrative Support</label>
+                        <label><input type="checkbox" name="va-needs" value="email-management"> Email Management</label>
+                        <label><input type="checkbox" name="va-needs" value="calendar-management"> Calendar Management</label>
+                        <label><input type="checkbox" name="va-needs" value="data-entry"> Data Entry</label>
+                        <label><input type="checkbox" name="va-needs" value="customer-service"> Customer Service</label>
+                        <label><input type="checkbox" name="va-needs" value="social-media"> Social Media Management</label>
+                        <label><input type="checkbox" name="va-needs" value="content-writing"> Content Writing</label>
+                        <label><input type="checkbox" name="va-needs" value="bookkeeping"> Bookkeeping</label>
+                        <label><input type="checkbox" name="va-needs" value="research"> Research</label>
+                        <label><input type="checkbox" name="va-needs" value="ecommerce-support"> E-Commerce Support</label>
+                        <label><input type="checkbox" name="va-needs" value="real-estate-support"> Real Estate Support</label>
                     </div>
-                    <div class="form-group">
-                        <label for="message">How Can We Help? (Optional)</label>
-                        <textarea id="message" name="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="cta-button" style="width: 100%;">BOOK MY FREE CALL NOW</button>
-                </form>
-            </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">How Can We Help? (Optional)</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%;">BOOK MY FREE CALL NOW</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
